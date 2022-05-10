@@ -2,11 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import { TextField } from './components/TextField';
+
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <textarea style={{resize: "none", backgroundColor: "grey", width: "200px", height: "1000px"}} autoFocus placeholder="type here idiot">
+
+        </textarea>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -19,8 +23,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <TextField text="pog"/>
     </div>
   );
-}
+};
 
 export default App;
