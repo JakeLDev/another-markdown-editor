@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      var windowTopBar = document.createElement('div')
+      windowTopBar.style.width = "100%"
+      windowTopBar.style.height = "32px"
+      windowTopBar.style.backgroundColor = "#000"
+      windowTopBar.style.position = "absolute"
+      windowTopBar.style.top = windowTopBar.style.left = 0
+      windowTopBar.style.webkitAppRegion = "drag"
+      document.body.appendChild(windowTopBar)
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { marked } from 'marked';
+import Editor from '../components/Editor';
 
 import { sampleText } from '../components/sampleText';
 
@@ -22,14 +23,19 @@ class Test extends React.Component {
 
     render() {
         return (
-            <div>
-                <textarea
-                    id='text'
-                    onChange={this.handleChange}
-                    className='form-control'
-                    rows={35}>{this.state.text}</textarea>
-                <div dangerouslySetInnerHTML= {this.renderText(this.state.text)} />
-            </div>
+            <>
+                <div>
+                    <textarea
+                        id='text'
+                        onChange={this.handleChange}
+                        className='form-control'
+                        rows={35}>{this.state.text}</textarea>
+                    <div dangerouslySetInnerHTML= {this.renderText(this.state.text)} />
+                </div>
+                <div>
+                    <Editor />
+                </div>
+            </>
         )
     }
 }
